@@ -7,10 +7,73 @@
 
 body {
   font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  padding: 32px 0 0;
 }
 
 .heading {
   font-family: "Playfair Display", sans-serif;
+}
+
+/* styling header section */
+header > h1 {
+  padding: 5px 20px 0;
+  font-size: 24px;
+}
+.wrapper {
+  margin: 20px 20px 0;
+  max-width: 529px;
+  display: flex;
+  column-gap: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+.wrapper img {
+  padding-top: 5px;
+  align-self: flex-start;
+}
+.cake {
+  margin-top: 20px;
+  padding: 0 20px;
+  width: 100%;
+}
+
+/* styling aside content */
+aside {
+  padding: 0 20px;
+}
+.orange {
+  color: orange;
+}
+.box {
+  margin-top: 25px;
+  width: 111px;
+  height: 26px;
+  display: flex;
+  column-gap: 5px;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.material-symbol-outlined {
+  height: 17px;
+  width: 17px;
+}
+.info h3 {
+  font-size: 8px;
+  color: #bdbdbd;
+}
+.info span {
+  font-size: 10px;
+}
+.row {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+/* styling main content of the body */
+.main {
+  margin: 30px 20px 0;
 }
 
 /* Style for large screend window */
