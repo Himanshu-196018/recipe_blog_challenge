@@ -40,13 +40,11 @@ header > h1 {
 
 /* styling aside content */
 aside {
+  margin-top: 40px;
   padding: 0 15px;
   max-width: 528px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-}
-.orange {
-  color: orange;
 }
 .serve {
   grid-column: 1/4;
@@ -60,9 +58,9 @@ aside {
   flex-wrap: wrap;
   align-content: center;
 }
-.material-symbol-outlined {
-  height: 17px;
-  width: 17px;
+.icon {
+  font-size: 17px;
+  color: #4f4f4f;
 }
 .info h3 {
   font-size: 8px;
@@ -71,10 +69,13 @@ aside {
 .info span {
   font-size: 10px;
 }
+.orange {
+  color: orange;
+}
 
 /* styling main content of the body */
 .main {
-  margin: 35px 15px 0;
+  margin: 40px 15px 0;
   max-width: 528px;
 }
 .main > h1 {
@@ -95,6 +96,8 @@ li > ul {
 ul > li > h2 {
   font-size: 16px;
   font-style: italic;
+  color: #333;
+  font-weight: 400;
 }
 li {
   line-height: 25px;
@@ -149,7 +152,7 @@ p > a {
 }
 
 /* Style for large screend window */
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 790px) {
   .middle {
     margin: 0 auto;
     max-width: 980px;
@@ -161,6 +164,7 @@ p > a {
     justify-content: space-between;
   }
   aside {
+    margin-right: 20px;
     width: 216px;
     height: 367px;
     grid-template-columns: 1fr;
@@ -176,8 +180,32 @@ p > a {
     width: 122px;
     justify-self: center;
   }
+
+  /* font size for bigger screens */
+  .info h3 {
+    font-size: 12px;
+  }
+  header > h1 {
+    font-size: 48px;
+  }
+  .main > h1 {
+    font-size: 24px;
+  }
+  ul > li > h2,
+  li > p {
+    font-size: 18px;
+  }
+  .wrapper,
+  .info span {
+    font-size: 14px;
+  }
   ol + p {
     font-size: 16px;
+  }
+  .box > .icon {
+    height: 34px;
+    width: 34px;
+    font-size: 34px;
   }
 }
 
