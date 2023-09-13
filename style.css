@@ -17,11 +17,11 @@ body {
 
 /* styling header section */
 header > h1 {
-  padding: 5px 20px 0;
+  padding: 5px 15px 0;
   font-size: 24px;
 }
 .wrapper {
-  margin: 20px 20px 0;
+  margin: 20px 15px 0;
   max-width: 529px;
   display: flex;
   column-gap: 12px;
@@ -34,13 +34,13 @@ header > h1 {
 }
 .cake {
   margin-top: 20px;
-  padding: 0 20px;
+  padding: 0 15px;
   width: 100%;
 }
 
 /* styling aside content */
 aside {
-  padding: 0 20px;
+  padding: 0 15px;
   max-width: 528px;
 }
 .orange {
@@ -67,6 +67,7 @@ aside {
   font-size: 10px;
 }
 .row {
+  margin-top: 10px;
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -74,7 +75,7 @@ aside {
 
 /* styling main content of the body */
 .main {
-  margin: 30px 20px 0;
+  margin: 35px 15px 0;
   max-width: 528px;
 }
 .main > h1 {
@@ -86,7 +87,7 @@ li {
   margin-top: 12px;
 }
 li > ul {
-  margin-left: 20px;
+  margin-left: 24px;
   list-style-type: none;
 }
 #ingredients {
@@ -99,20 +100,49 @@ ul > li > h2 {
 li {
   line-height: 25px;
 }
+.square-list::marker {
+  content: "\25fd";
+  font-size: 28px;
+  color: #828282;
+}
 
 /* style for instruction section */
 #instruction {
   margin-top: 20px;
 }
 ol {
-  margin-left: 30px;
+  list-style-type: none;
 }
 ol > li {
   margin-top: 26px;
+  display: flex;
+  column-gap: 15px;
 }
-p {
+li > p {
+  font-size: 16px;
+}
+.marker::before {
+  counter-increment: list-item;
+  content: counter(list-item);
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  font-family: "Playfair-Display";
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  text-align: center;
+  background-color: #f2994a;
+  float: left;
+}
+
+/* style for source section */
+ol + p {
   margin-top: 26px;
   color: #bdbdbd;
+  font-style: italic;
+  font-size: 12px;
 }
 p > a {
   text-decoration: none;
@@ -121,6 +151,9 @@ p > a {
 
 /* Style for large screend window */
 @media screen and (min-width: 980px) {
+  ol + p {
+    font-size: 16px;
+  }
 }
 
 /* styling footer */
