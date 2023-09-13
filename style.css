@@ -42,9 +42,14 @@ header > h1 {
 aside {
   padding: 0 15px;
   max-width: 528px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 .orange {
   color: orange;
+}
+.serve {
+  grid-column: 1/4;
 }
 .box {
   margin-top: 25px;
@@ -65,12 +70,6 @@ aside {
 }
 .info span {
   font-size: 10px;
-}
-.row {
-  margin-top: 10px;
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
 }
 
 /* styling main content of the body */
@@ -150,7 +149,33 @@ p > a {
 }
 
 /* Style for large screend window */
-@media screen and (min-width: 980px) {
+@media screen and (min-width: 990px) {
+  .middle {
+    margin: 0 auto;
+    max-width: 980px;
+  }
+  .big-screen {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  aside {
+    width: 216px;
+    height: 367px;
+    grid-template-columns: 1fr;
+    align-content: space-evenly;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+  }
+  .serve {
+    grid-column: 1;
+  }
+  .box {
+    margin: 0;
+    width: 122px;
+    justify-self: center;
+  }
   ol + p {
     font-size: 16px;
   }
